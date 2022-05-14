@@ -12,11 +12,11 @@ public class Solution {
                 carry = (l1.val + l2.val + carry) / 10;
                 l1 = l1.next;
                 l2 = l2.next;
-            } else if (l1 == null && l2 != null) {
+            } else if (l1 == null) {
                 temp.val = (l2.val + carry) % 10;
                 carry = (l2.val + carry) / 10;
                 l2 = l2.next;
-            } else if (l2 == null && l1 != null) {
+            } else {
                 temp.val = (l1.val + carry) % 10;
                 carry = (l1.val + carry) / 10;
                 l1 = l1.next;
